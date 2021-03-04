@@ -19,7 +19,7 @@ setup(
     name='ejtraderDB',
     version='1.0.0',
     packages=find_packages(),
-    url='https://ejtraderMT.readthedocs.io/',
+    url='https://ejtraderDB.readthedocs.io/',
     download_url='https://ejtrader.com',
     license='MIT License',
     author='Emerson Pedroso',
@@ -53,8 +53,8 @@ setup(
         'crypto currencies'
     ]),
     project_urls={
-        'Bug Reports': 'https://github.com/traderpedroso/ejtrader_mt/issues',
-        'Source': 'https://github.com/traderpedroso/ejtrader_mt',
+        'Bug Reports': 'https://github.com/traderpedroso/ejtraderDB/issues',
+        'Source': 'https://github.com/traderpedroso/ejtraderDB',
         'Documentation': 'https://ejtrader.readthedocs.io/'
     },
 )
