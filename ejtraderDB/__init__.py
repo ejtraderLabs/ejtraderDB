@@ -1,8 +1,3 @@
-# coding=utf-8
-__author__ = 'Emerson Pedroso'
-__license__ = 'MIT'
-__version__ = '1.0'
-
 from .exceptions import Empty, Full  
 
 
