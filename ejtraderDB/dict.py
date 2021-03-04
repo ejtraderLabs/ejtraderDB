@@ -2,12 +2,12 @@
 import logging
 import sqlite3
 
-from ejtraderDB import sqlite_set 
+from ejtraderDB import sqlbase
 
 log = logging.getLogger(__name__)
 
 
-class DictSQLite(sqlite_set.SQLiteSet, dict):
+class DictSQLite(sqlbase.SQLiteBase, dict):
     _TABLE_NAME = 'dict'
     _KEY_COLUMN = 'key'
     _SQL_CREATE = ('CREATE TABLE IF NOT EXISTS {table_name} ('
@@ -17,11 +17,11 @@ class DictSQLite(sqlite_set.SQLiteSet, dict):
                    'WHERE {key_column} = ?')
     _SQL_UPDATE = 'UPDATE {table_name} SET data = ? WHERE {key_column} = ?'
 
-    def __init__(self, path=None, name=None, multithreading=True,auto_commit=True):
+    def __init__(self, path, name=None, multithreading=False):
         # PDict is always auto_commit=True
-        super(DictSQLite, self).__init__(path, name=name,
+        super(DictSQLite, self).__init__(f'DataBase/{path}', name=name,
                                     multithreading=multithreading,
-                                    auto_commit=auto_commit)
+                                    auto_commit=True)
 
     def __iter__(self):
         raise NotImplementedError('Not supported.')

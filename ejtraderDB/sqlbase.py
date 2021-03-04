@@ -22,7 +22,6 @@ def with_conditional_transaction(func):
 
 def commit_ignore_error(conn):
     """Ignore the error of no transaction is active.
-
     The transaction may be already committed by user's task_done call.
     It's safe to ignore all errors of this kind.
     """
@@ -37,7 +36,7 @@ def commit_ignore_error(conn):
             raise
 
 
-class SQLiteSet(object):
+class SQLiteBase(object):
     """SQLite3 base class."""
 
     _TABLE_NAME = 'base'  # DB table name
@@ -49,12 +48,11 @@ class SQLiteSet(object):
     _SQL_SELECT_WHERE = ''  # SQL to select a record with criteria
     _MEMORY = ':memory:'  # flag indicating store DB in memory
 
-    def __init__(self, path=None, name='default', multithreading=True,
+    def __init__(self, path, name='default', multithreading=False,
                  timeout=10.0, auto_commit=True,
                  serializer=ejtraderDB.serializers.pickle,
                  db_file_name=None):
         """Initiate a queue in sqlite3 or memory.
-
         :param path: path for storing DB file.
         :param name: the suffix for the table name,
                      table name would be ${_TABLE_NAME}_${name}
@@ -77,13 +75,13 @@ class SQLiteSet(object):
                              default to `data.db`
         """
         self.memory_sql = False
-        self.path = path or 'data'
+        self.path = path
         self.name = name
         self.timeout = timeout
         self.multithreading = multithreading
         self.auto_commit = auto_commit
         self._serializer = serializer
-        self.db_file_name = f'{name}.db' or "data.db"
+        self.db_file_name = "data.db"
         if db_file_name:
             self.db_file_name = db_file_name
         self._init()
@@ -93,7 +91,7 @@ class SQLiteSet(object):
 
         if self.path == self._MEMORY:
             self.memory_sql = True
-            print("Initializing Sqlite3 Queue in memory.")
+            log.debug("Initializing Sqlite3 Queue in memory.")
         elif not os.path.exists(self.path):
             os.makedirs(self.path)
             log.debug(
