@@ -19,7 +19,7 @@ class DictSQLite(sqlbase.SQLiteBase, dict):
 
     def __init__(self, path, name=None, multithreading=False):
         # PDict is always auto_commit=True
-        super(DictSQLite, self).__init__(f'DataBase/{path}', name=name,
+        super(DictSQLite, self).__init__(path, name=name,
                                     multithreading=multithreading,
                                     auto_commit=True)
 

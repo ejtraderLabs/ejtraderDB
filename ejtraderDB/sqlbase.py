@@ -75,7 +75,7 @@ class SQLiteBase(object):
                              default to `data.db`
         """
         self.memory_sql = False
-        self.path = path
+        self.path = f'DataBase/{path}'
         self.name = name
         self.timeout = timeout
         self.multithreading = multithreading
