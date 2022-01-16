@@ -12,4 +12,4 @@ except ImportError:
     log = logging.getLogger(__name__)
     log.info("No sqlite3 module found, sqlite3 based queues are not available")
 
-__all__ = ["DictSQLite", "SQLiteQueue", "FIFOSQLiteQueue","FILOSQLiteQueue", "UniqueQ", "Empty", "Full"]
+__all__ = ["DictSQLite", "SQLiteQueue", "FIFOSQLiteQueue","FILOSQLiteQueue", "UniqueQ", "Empty", "Full","QuestDB"]
