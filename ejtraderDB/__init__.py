@@ -4,6 +4,7 @@ from .exceptions import Empty, Full
 try:
     from .dict import DictSQLite  #noqa
     from .sqlqueue import SQLiteQueue, FIFOSQLiteQueue, FILOSQLiteQueue, UniqueQ  # noqa
+    from .questdb import QuestDB # noqa
     
 except ImportError:
     import logging

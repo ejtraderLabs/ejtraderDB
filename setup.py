@@ -17,14 +17,14 @@ def requirements(filename):
 
 setup(
     name='ejtraderDB',
-    version='1.0.2',
+    version='1.0.3',
     packages=find_packages(),
     url='https://ejtraderDB.readthedocs.io/',
     download_url='https://ejtrader.com',
     license='MIT License',
     author='Emerson Pedroso',
     author_email='support@ejtrader.com',
-    description='Metatrader API',
+    description='SQlite and QuestDB',
     long_description=readme(),
     long_description_content_type='text/markdown',
     install_requires=requirements(filename='requirements.txt'),
