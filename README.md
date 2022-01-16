@@ -6,8 +6,29 @@
 pip install ejtraderDB - U
 ```
 
+### Description for DictSQlite
 
-## Description
+## import
+
+```python
+from ejtraderDB import DictSQlite
+
+api = DictSQLite('history',multithreading=True)
+
+
+# save to sqlite
+api["keyname"] = dataFrame
+
+
+# read from sqlite
+
+dataFrame = api['keyname']
+
+print(dataFrame)
+```
+
+
+## Description for QuestDb
 
 API wrapper following the basic API requirements of QuestDB described [here](https://questdb.io/docs/reference/api/rest/).
 
