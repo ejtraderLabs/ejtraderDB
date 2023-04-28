@@ -17,7 +17,7 @@ def requirements(filename):
 
 setup(
     name='ejtraderDB',
-    version='1.0.3',
+    version='1.0.4',
     packages=find_packages(),
     url='https://ejtraderDB.readthedocs.io/',
     download_url='https://ejtrader.com',
@@ -43,9 +43,6 @@ setup(
         "Topic :: Software Development :: Libraries"
     ],
     python_requires='>=3',
-    extras_require={
-        "docs": requirements(filename='docs/requirements.txt')
-    },
     keywords=', '.join([
         'metatrader', 'f-api', 'historical-data',
         'financial-data', 'stocks', 'funds', 'etfs',
