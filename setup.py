@@ -50,8 +50,8 @@ setup(
         'crypto currencies'
     ]),
     project_urls={
-        'Bug Reports': 'https://github.com/traderpedroso/ejtraderDB/issues',
-        'Source': 'https://github.com/traderpedroso/ejtraderDB',
+        'Bug Reports': 'https://github.com/ejtraderLabs/ejtraderDB/issues',
+        'Source': 'https://github.com/ejtraderLabs/ejtraderDB',
         'Documentation': 'https://ejtrader.readthedocs.io/'
     },
 )
