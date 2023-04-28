@@ -1,5 +1,6 @@
 ![Pypi Publish](https://github.com/ejtraderLabs/ejtraderDB/actions/workflows/python-publish.yml/badge.svg)
-[![Release](https://img.shields.io/github/v/release/ejtraderLabs/ejtraderDB)](https://github.com/ejtraderLabs/ejtraderDB/releases/latest)  [![License](https://img.shields.io/github/license/ejtraderLabs/ejtraderDB)](https://github.com/ejtraderLabs/ejtraderDB/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/ejtraderLabs/ejtraderDB)](https://github.com/ejtraderLabs/ejtraderDB/releases/latest)
+[![License](https://img.shields.io/github/license/ejtraderLabs/ejtraderDB)](https://github.com/ejtraderLabs/ejtraderDB/blob/master/LICENSE)
 
 ## Install requirements:
 
